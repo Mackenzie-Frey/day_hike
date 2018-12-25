@@ -2,8 +2,8 @@ class CreateTrips < ActiveRecord::Migration[5.1]
   def change
     create_table :trips do |t|
       t.string :name
-      t.datetime :start_date
-      t.datetime :end_date
+      t.integer :start_date
+      t.integer :end_date
     end
   end
 end
