@@ -10,6 +10,10 @@ describe 'As a User' do
 
       expect(page).to have_content("#{trip_1.name}")
       expect(page).to have_content("#{trip_2.name}")
+
+      click_on "#{trip_1.name}"
+
+      expect(current_path).to eq(trip_path(trip_1))
     end
   end
 end
