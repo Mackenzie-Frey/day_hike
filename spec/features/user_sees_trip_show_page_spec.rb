@@ -11,7 +11,7 @@ describe 'As a User' do
       trail_3 = trip_2.trails.create(name: 'The Happiest Trail', length: 5, address: '123 This Lane')
 
       visit trip_path(trip_1)
-      
+
       expect(page).to have_content(trail_1.name)
       expect(page).to have_content(trail_2.name)
 
@@ -20,25 +20,12 @@ describe 'As a User' do
 
       expect(page).to have_content("Length: #{trail_1.length}")
       expect(page).to_not have_content("Length: #{trail_3.length}")
+
+      expect(page).to have_content("Total Distance: #{trip_1.total_length}")
     end
   end
 end
 
-
-# User Story 3 of 10
-#
-# As a visitor,
-# when I visit a hiking trip's page,
-
-# I see a list of trails included in the trip,
-# I see the name, address, and length for each trail.
-
-# User Story 4 of 10
-#
-# As a visitor,
-# when I visit a hiking trip's page,
-# I see the total hiking distance
-# of all trails on that hiking trip
 # User Story 5 of 10
 #
 # As a visitor,
