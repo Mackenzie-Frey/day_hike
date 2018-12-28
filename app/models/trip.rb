@@ -10,4 +10,8 @@ class Trip < ApplicationRecord
   def average_length
     trails.average(:length)
   end
+
+  def longest_trail
+    trails.order("length DESC").first
+  end
 end
