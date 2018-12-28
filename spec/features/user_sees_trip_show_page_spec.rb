@@ -11,7 +11,7 @@ describe 'As a User' do
       trail_3 = trip_2.trails.create(name: 'The Happiest Trail', length: 5, address: '123 This Lane')
 
       visit trip_path(trip_1)
-
+      
       expect(page).to have_content(trail_1.name)
       expect(page).to have_content(trail_2.name)
 

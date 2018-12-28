@@ -4,6 +4,9 @@ class TripsController < ApplicationController
   end
 
   def show
-    @trip = Trip.last
+    @trip = Trip.find(params[:id])
   end
+
+  private
+
 end
