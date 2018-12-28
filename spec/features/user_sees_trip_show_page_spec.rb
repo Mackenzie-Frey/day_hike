@@ -22,6 +22,7 @@ describe 'As a User' do
       expect(page).to_not have_content("Length: #{trail_3.length}")
 
       expect(page).to have_content("Total Distance: #{trip_1.total_length}")
+      expect(page).to have_content("Average Distance: #{trip_1.average_length}")
     end
   end
 end
