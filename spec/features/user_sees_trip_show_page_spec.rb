@@ -25,21 +25,10 @@ describe 'As a User' do
       expect(page).to have_content("Average Distance: #{trip_1.average_length}")
       expect(page).to have_content("Longest Trail on Trip Name: #{trail_2.name} Length: #{trail_2.length}")
       expect(page).to have_content("Shortest Trail on Trip Name: #{trail_1.name} Length: #{trail_1.length}")
+
+      click_on(trail_1.name)
+
+      expect(current_path).to eq(trail_path(trail_1))
     end
   end
 end
-
-# User Story 7 of 10
-#
-# As a visitor,
-# when I visit a hiking trip's page,
-# I see a heading that says "Shortest Trail on Trip"
-#   and the name and length of the longest trail
-#   included on that hiking trip
-
-# User Story 8 of 10
-#
-# As a visitor,
-# when I visit a hiking trip's page,
-# I can click on the name of a trail
-# to see a show page for that specific trail.
