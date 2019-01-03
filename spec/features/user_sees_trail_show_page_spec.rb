@@ -13,6 +13,7 @@ describe 'As a user on the trail show page' do
     expect(page).to have_content(trail_1.name)
     expect(page).to have_content(trip_1.name)
     expect(page).to have_content(trip_1.total_length)
+    expect(page).to have_content("Total Trips: #{trail_1.total_trips}")
   end
 end
 
