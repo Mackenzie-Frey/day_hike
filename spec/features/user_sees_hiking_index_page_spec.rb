@@ -5,6 +5,7 @@ describe 'As a User' do
     it 'I see a list of all hiking trip names' do
       trip_1 = Trip.create(name: 'Beginner Trip', start_date: 25, end_date: 30)
       trip_2 = Trip.create(name: 'Medium Salsa Trip', start_date: 25, end_date: 31)
+      
 
       visit trips_path
 

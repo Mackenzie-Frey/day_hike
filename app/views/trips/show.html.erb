@@ -7,4 +7,7 @@
 Total Distance: <%= @trip.total_length %>
 Average Distance: <%= @trip.average_length %>
 
-Longest Trail on Trip Name: <%= @trip.longest_trail.name %> Length: <%= @trip.longest_trail.length %>
+Longest Trail on Trip Name:
+<%= @trip.longest_trail.name if @trip.longest_trail %>
+Length:
+<%= @trip.longest_trail.length if @trip.longest_trail %>
