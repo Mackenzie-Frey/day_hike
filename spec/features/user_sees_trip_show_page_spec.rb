@@ -24,6 +24,7 @@ describe 'As a User' do
       expect(page).to have_content("Total Distance: #{trip_1.total_length}")
       expect(page).to have_content("Average Distance: #{trip_1.average_length}")
       expect(page).to have_content("Longest Trail on Trip Name: #{trail_2.name} Length: #{trail_2.length}")
+      expect(page).to have_content("Shortest Trail on Trip Name: #{trail_1.name} Length: #{trail_1.length}")
     end
   end
 end
@@ -35,6 +36,7 @@ end
 # I see a heading that says "Shortest Trail on Trip"
 #   and the name and length of the longest trail
 #   included on that hiking trip
+
 # User Story 8 of 10
 #
 # As a visitor,
